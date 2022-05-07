@@ -1,7 +1,7 @@
 import "animate.css";
 import Icon_ from "./assets/icon.png";
-import ReactTooltip from "react-tooltip";
 import { Icon } from "@iconify/react";
+import { Tooltip } from "@mui/material";
 
 const App = () => {
   return (
@@ -71,29 +71,39 @@ const App = () => {
           <h2 className="font-medium text-2xl py-4">Weather Details</h2>
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
-              <ReactTooltip>
+              <Tooltip title=" the fraction of the sky obscured by clouds on average when observed from a particular location">
                 <span className="font-light text-zinc-700">Cloud</span>
-              </ReactTooltip>
+              </Tooltip>
               <span>75%</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="font-light text-zinc-700">Humidity</span>
+              <Tooltip title="The amount of water vapor in the air">
+                <span className="font-light text-zinc-700">Humidity</span>
+              </Tooltip>
               <span>84%</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="font-light text-zinc-700">Wind</span>
+              <Tooltip title="Wind is moving air and is caused by differences in air pressure within our atmosphere">
+                <span className="font-light text-zinc-700">Wind</span>
+              </Tooltip>
               <span>7.8km/h</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="font-light text-zinc-700">Pressure</span>
+              <Tooltip title="The force exerted on a surface by the air above it as gravity pulls it to Earth">
+                <span className="font-light text-zinc-700">Pressure</span>
+              </Tooltip>
               <span>1006mb</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="font-light text-zinc-700">Visibility</span>
+              <Tooltip title="The distance one can see as determined by light and weather conditions">
+                <span className="font-light text-zinc-700">Visibility</span>
+              </Tooltip>
               <span>9km</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="font-light text-zinc-700">Wind Gust</span>
+              <Tooltip title="A brief increase in the speed of the wind, usually less than 20 seconds">
+                <span className="font-light text-zinc-700">Wind Gust</span>
+              </Tooltip>
               <span>11km/h</span>
             </div>
           </div>
