@@ -61,7 +61,7 @@ const Weather = () => {
         <p className="text-xl ml-0.5">
           {moment(data.location.localtime_epoch * 1000).format("ddd, MMM D")}
         </p>
-        <h2 className="text-4xl mt-6 tracking-wider">
+        <h2 className="text-5xl mt-6 tracking-wider">
           Good {getTime()}, Jiahuiiiii
         </h2>
         <p className="text-cyan-100 mt-4 font-light text-xl lg:text-2xl tracking-wide">
@@ -70,12 +70,12 @@ const Weather = () => {
         <div className="flex justify-between md:items-center md:flex-row flex-col items-start md:text-xl xl:text-2xl">
           <div className="flex-row">
             <img src={data.current.condition.icon} className="w-20" />
-            <p className="flex items-center gap-2 mt-4">
+            <p className="flex items-center gap-3 mt-4">
               <Icon icon="carbon:location-filled" />
               {data.location.name}
             </p>
-            <p className="font-medium mt-2">{data.current.condition.text}</p>
-            <p className="font-extralight mt-2">
+            <p className="font-medium mt-2 md:mt-4">{data.current.condition.text}</p>
+            <p className="font-extralight mt-2 md:mt-4">
               Feels like{" "}
               <span className="font-semibold">
                 {data.current.feelslike_c}°C
@@ -121,7 +121,7 @@ const Weather = () => {
             placeholder="Location"
             value={query}
             onChange={(e) => setquery(e.target.value)}
-            className=" border-b-2 border-zinc-300 pb-2 text-xl focus:outline-none w-full "
+            className=" border-b-2 border-zinc-300 pb-2 lg:text-2xl focus:outline-none w-full "
           />
           <Icon icon="uil:search" className="w-6 h-6 mb-5" />
           <div className="absolute bottom-0 rounded-b-md left-0 flex w-full z-10 flex-col translate-y-full bg-white shadow-lg divide-y">
@@ -142,7 +142,7 @@ const Weather = () => {
         </div>
         <div className="mt-8">
           <h2 className="font-medium text-2xl py-4 lg:text-3xl">Weather Details</h2>
-          <div className="flex flex-col gap-3 md:text-xl xl:text-2xl">
+          <div className="flex flex-col gap-3 lg:gap-5 md:text-xl xl:text-2xl">
             <div className="flex items-center justify-between">
               <Tooltip title=" the fraction of the sky obscured by clouds on average when observed from a particular location">
                 <span className="font-light text-zinc-700">Cloud</span>
@@ -195,13 +195,13 @@ const Weather = () => {
 
         <div className="mt-8">
           <h2 className="font-medium text-2xl py-4 lg:text-3xl">Weather Forecast</h2>
-          <div className="flex flex-col gap-3 md:text-xl xl:text-2xl">
+          <div className="flex flex-col gap-3 md:text-xl xl:text-2xl ">
             {data.forecast.forecastday.map((day) => (
               <div className="flex justify-between items-center">
                 <span className="font-light text-zinc-700">
                   {moment(day.date_epoch * 1000).format("ddd, MMM D")}
                 </span>
-                <img src={day.day.condition.icon} className="w-8 h-8" />
+                <img src={day.day.condition.icon} className="w-8 h-8 md:w-12 md:h-12 xl:w-14 xl:h-14" />
               </div>
             ))}
           </div>
