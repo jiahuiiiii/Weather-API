@@ -64,10 +64,10 @@ const Weather = () => {
         <h2 className="text-4xl mt-6 tracking-wider">
           Good {getTime()}, Jiahuiiiii
         </h2>
-        <p className="text-cyan-100 mt-4 font-light text-xl tracking-wide">
+        <p className="text-cyan-100 mt-4 font-light text-xl lg:text-2xl tracking-wide">
           Here&apos;s your weather telecast for today
         </p>
-        <div className="flex justify-between md:items-center md:flex-row flex-col items-start">
+        <div className="flex justify-between md:items-center md:flex-row flex-col items-start md:text-xl xl:text-2xl">
           <div className="flex-row">
             <img src={data.current.condition.icon} className="w-20" />
             <p className="flex items-center gap-2 mt-4">
@@ -114,7 +114,7 @@ const Weather = () => {
         </svg>
       </div>
 
-      <div className="lg:w-1/2 h-full mx-10 pt-12 flex flex-col ">
+      <div className="lg:w-1/2 h-full mx-10 pt-12 lg:pt-20 flex flex-col lg:mx-20">
         <div className="flex justify-between w-full items-center relative">
           <input
             type="text"
@@ -141,8 +141,8 @@ const Weather = () => {
           </div>
         </div>
         <div className="mt-8">
-          <h2 className="font-medium text-2xl py-4">Weather Details</h2>
-          <div className="flex flex-col gap-3 lg:text-xl">
+          <h2 className="font-medium text-2xl py-4 lg:text-3xl">Weather Details</h2>
+          <div className="flex flex-col gap-3 md:text-xl xl:text-2xl">
             <div className="flex items-center justify-between">
               <Tooltip title=" the fraction of the sky obscured by clouds on average when observed from a particular location">
                 <span className="font-light text-zinc-700">Cloud</span>
@@ -194,8 +194,8 @@ const Weather = () => {
         </div>
 
         <div className="mt-8">
-          <h2 className="font-medium text-2xl py-4">Weather Forecast</h2>
-          <div className="flex flex-col gap-3 lg:text-xl">
+          <h2 className="font-medium text-2xl py-4 lg:text-3xl">Weather Forecast</h2>
+          <div className="flex flex-col gap-3 md:text-xl xl:text-2xl">
             {data.forecast.forecastday.map((day) => (
               <div className="flex justify-between items-center">
                 <span className="font-light text-zinc-700">
