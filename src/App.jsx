@@ -201,7 +201,7 @@ const Weather = () => {
                 <span className="font-light text-zinc-700">
                   {moment(day.date_epoch * 1000).format("ddd, MMM D")}
                 </span>
-                <img src={day.day.condition.icon} className="w-8 h-8 md:w-12 md:h-12 xl:w-14 xl:h-14" />
+                <img src={day.day.condition.icon} className="w-8 h-8 md:w-12 md:h-12" />
               </div>
             ))}
           </div>
