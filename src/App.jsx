@@ -206,6 +206,7 @@ const Weather = () => {
             ))}
           </div>
         </div>
+        <p className="text-center mb-4 mt-12 flex h-full items-end justify-center">Made with ❤ by Jiahuiiiii from MRNA.</p>
       </div>
     </div>
   ) : (
