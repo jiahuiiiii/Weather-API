@@ -67,7 +67,7 @@ const Weather = () => {
         <p className="text-cyan-100 mt-4 font-light text-xl tracking-wide">
           Here&apos;s your weather telecast for today
         </p>
-        <div className="flex justify-between lg:items-center lg:flex-row flex-col items-start">
+        <div className="flex justify-between md:items-center md:flex-row flex-col items-start">
           <div className="flex-row">
             <img src={data.current.condition.icon} className="w-20" />
             <p className="flex items-center gap-2 mt-4">
@@ -82,7 +82,7 @@ const Weather = () => {
               </span>
             </p>
           </div>
-          <p className="font-semibold text-6xl">{data.current.temp_c}°C</p>
+          <p className="font-semibold text-6xl mt-3">{data.current.temp_c}°C</p>
         </div>
 
         <Icon
