@@ -142,7 +142,7 @@ const Weather = () => {
         </div>
         <div className="mt-8">
           <h2 className="font-medium text-2xl py-4">Weather Details</h2>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 lg:text-xl">
             <div className="flex items-center justify-between">
               <Tooltip title=" the fraction of the sky obscured by clouds on average when observed from a particular location">
                 <span className="font-light text-zinc-700">Cloud</span>
@@ -195,7 +195,7 @@ const Weather = () => {
 
         <div className="mt-8">
           <h2 className="font-medium text-2xl py-4">Weather Forecast</h2>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 lg:text-xl">
             {data.forecast.forecastday.map((day) => (
               <div className="flex justify-between items-center">
                 <span className="font-light text-zinc-700">
