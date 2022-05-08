@@ -33,7 +33,7 @@ const Weather = () => {
   useEffect(() => {
     setquery("");
     fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${
+      `https://api.weatherapi.com/v1/forecast.json?key=${
         import.meta.env.VITE_API_KEY
       }&q=${place || "Johor Bahru"}&days=3&aqi=no&alerts=no`
     )
@@ -46,7 +46,7 @@ const Weather = () => {
     setresult([]);
     if (query) {
       fetch(
-        `http://api.weatherapi.com/v1/search.json?key=${
+        `https://api.weatherapi.com/v1/search.json?key=${
           import.meta.env.VITE_API_KEY
         }&q=${query}}`
       )
